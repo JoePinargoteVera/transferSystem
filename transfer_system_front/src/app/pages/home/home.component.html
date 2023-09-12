@@ -1,0 +1,63 @@
+<!-- <app-sidebar></app-sidebar> -->
+<div class="container mt-5 w-50 bg-light">
+  <!-- <form> -->
+  <div class="form-group row">
+    <h3>
+      <small class="text-muted">BIENVENIDO </small>
+      {{name | uppercase}}
+    </h3>
+    <div class="col-sm-10">
+
+    </div>
+  </div>
+
+  <div class="mt-5">
+
+
+    <div class="row mb-3">
+      <div *ngIf="tipo_usuario == 'owner'" class="col-md-1 text-start ">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mimodal">Añadir nueva
+          empresa <i class="bi bi-building-add"></i> </button>
+
+        <!-- <app-registro-empresa class="modal fade" id="mimodal" tabindex="-1" aria-hidden="true"
+          aria-labelledby="modalTitle" (empresaGuardada)="actualizarEmpresas()"
+          [childMessage]="id"></app-registro-empresa> -->
+      </div>
+
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th *ngIf="tipo_usuario == 'owner'">TUS EMPRESAS</th>
+          <th *ngIf="tipo_usuario == 'admin'">EMPRESAS REGISTRADAS</th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let element of obj">
+          <td>{{ element.nombre_empresa |uppercase }}</td>
+          <td><button type="button" class="btn" (click)="OnCLickInfo(element.id)"><i class="bi bi-eye"></i></button>
+          </td>
+          <td><button type="button" class="btn" (click)="OnClickConf(element.id)"><i class="bi bi-gear"></i></button>
+          </td>
+          <td><button type="button" class="btn" (click)="OnClickRol(element.id)"><i
+                class="bi bi-clipboard-data"></i></button></td>
+          <td><button type="button" class="btn" (click)="OnClick(element.id, element.nombre_empresa, id)"><i
+                class="bi bi-person-lines-fill"></i></button></td>
+          <!-- <td><button type="button" class="btn btn-danger" (click)="OnClickDelete(element.id)"><i
+                class="bi bi-trash"></i></button></td> -->
+        </tr>
+      </tbody>
+    </table>
+    <div *ngIf="errorMessage" class="alert alert-warning d-flex align-items-center" role="alert">
+      <i class="bi bi-exclamation-circle me-2"></i>
+      {{ errorMessage }}
+    </div>
+
+  </div>
+</div>

@@ -1,4 +1,4 @@
-# Pasos para habilitar el front-end de angular
+# Pasos para usar el front-end del proyecto
 ## Version de node
 para este proyecto de angular se necesita la version 18.16.0 pueden descargarsolo esta versio o tambien
 pueden descargar el manejador de versiones de node, lo cual les recomiendo, lo pueden descargar desde 
@@ -18,3 +18,41 @@ para instalar las dependencias de node simplemente ejecutamos el comando
 para ejecutar el programa simplemente ejecutamos
 
     ng serve
+
+---
+
+# pasos para usar el back-end de nuestro proyecto
+primeramente devemos verificar la version de php que tengamos instaldo, para hacer esto 
+escribimos en la terminal, para este proyecto necesitamos la version 8.1 o superior
+    
+    php -v
+si no tenemos php podemos instalarlo desde aqui: https://www.apachefriends.org/es/index.html
+
+## instalar composer
+ek paso siguiente es la instalacion de composer para poder gestionar las librerias
+necesarias para ejecutar el proyecto en laravel 10
+podremos descargar composer desde aqui: https://getcomposer.org/download/
+
+## generar key de laravel
+debemos ejecutar el siguiente comando para poder usar laravel
+
+    php artisan key:generate
+
+## ejecutar las migraciones
+para esto ya debemos tener una base de datos y haber configurado el archivo .env, como
+ese archivo no se sube debemos copiar el contenido del archivo .env.example en 
+el archivo .env 
+debemos ubicar el nombre de la base de datos y demas credenciales
+
+una vez establecidas los datos de conecciona tu base dedatos local ejecutamosel siguiente comando
+   
+    php artisan migrate
+
+con esto ya deberiamos tener la base de datos con las tablas basicas de nuestro sistema
+
+## establecer jwt key
+lo siguiente que queda por hacer es establecer el json web token (jwt)m lo hacemos con el siguiente comando
+    
+    php artisan jwt:secret
+
+y listo, ya podemos usar tanto nuestro front como nuestro backend

@@ -28,11 +28,11 @@ class AuthController extends Controller
             $user->direccion = $request->direccion;
             $user->save();
             // event(new Registered($user));
-            $token = JWTAuth::fromUser($user);
+            // $token = JWTAuth::fromUser($user);
             DB::commit();
             return response()->json([
                 'data' => $user,
-                'token'=>$token,
+                // 'token'=>$token,
                 'status' => Response::HTTP_CREATED
             ]);
         } catch (\Exception $e) {

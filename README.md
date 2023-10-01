@@ -29,10 +29,15 @@ escribimos en la terminal, para este proyecto necesitamos la version 8.1 o super
 si no tenemos php podemos instalarlo desde aqui: https://www.apachefriends.org/es/index.html
 
 ## instalar composer
-ek paso siguiente es la instalacion de composer para poder gestionar las librerias
+el paso siguiente es la instalacion de composer para poder gestionar las librerias
 necesarias para ejecutar el proyecto en laravel 10
 podremos descargar composer desde aqui: https://getcomposer.org/download/
 
+## instalar dependencias de composer
+ejecutamos el siguiente comando  para instalar las dependencias de composer en nuestro proyecto
+    
+    composer install
+    
 ## generar key de laravel
 debemos ejecutar el siguiente comando para poder usar laravel
 

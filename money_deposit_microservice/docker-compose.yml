@@ -15,7 +15,7 @@ services:
         volumes:
             - ./:/var/www
         ports:
-            - 8000:8000
+            - 8300:8300
         depends_on:
             - database
             # - redis
@@ -24,7 +24,7 @@ services:
     database:
         image: postgres:14
         ports:
-            -   5432:5432
+            -   5434:5432
         environment:
             - POSTGRES_DB=${DB_DATABASE}
             - POSTGRES_USER=${DB_USERNAME}

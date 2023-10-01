@@ -24,7 +24,7 @@ services:
     database:
         image: postgres:14
         ports:
-            -   5432:5432
+            -   5431:5432
         environment:
             - POSTGRES_DB=${DB_DATABASE}
             - POSTGRES_USER=${DB_USERNAME}

@@ -11,15 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('retiros', function (Blueprint $table) {
+        Schema::create('transfers', function (Blueprint $table) {
             $table->id();
-            $table->date('fecha_retiro')->default(now());
             $table->decimal('monto',10,2);
             $table->string('descripcion',)->nullable();
-            $table->unsignedBigInteger('user_emisor')->nullable();
-            $table->foreign('user_emisor')->references('id')->on('users');
-            $table->unsignedBigInteger('user_receptor')->nullable();
-            $table->foreign('user_receptor')->references('id')->on('users');
+            $table->unsignedBigInteger('cuenta_emisor');
+            $table->foreign('cuenta_emisor')->references('id')->on('acounts');
+            $table->unsignedBigInteger('cuenta_receptor');
+            $table->foreign('cuenta_receptor')->references('id')->on('acounts');
+            $table->date('fecha_transferencia')->default(now());
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('retiros');
+        Schema::dropIfExists('transfers');
     }
 };

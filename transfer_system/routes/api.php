@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\CuentaController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -23,4 +24,11 @@ Route::controller(AuthController::class)->prefix('auth')->group(function(){
     Route::post('singup','registro');
     Route::post('login','login');
     Route::post('logout','logout')->middleware('jwt.verified');
+});
+
+
+Route::controller(CuentaController::class)->prefix('cuenta')->group(function(){
+    Route::post('crear','crearCuenta');
+    Route::delete('eliminar','eliminarCuenta');
+    Route::get('ver','verCuenta');
 });

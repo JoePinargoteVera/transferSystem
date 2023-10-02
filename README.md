@@ -39,17 +39,14 @@ ejecutamos el siguiente comando  para instalar las dependencias de composer en n
     composer install
     
 ## generar key de laravel
+aqui debemos copiar el contenido del archivo .env.example en el archivo .env, luego
 debemos ejecutar el siguiente comando para poder usar laravel
 
     php artisan key:generate
 
 ## ejecutar las migraciones
-para esto ya debemos tener una base de datos y haber configurado el archivo .env, como
-ese archivo no se sube debemos copiar el contenido del archivo .env.example en 
-el archivo .env 
-debemos ubicar el nombre de la base de datos y demas credenciales
-
-una vez establecidas los datos de conecciona tu base dedatos local ejecutamosel siguiente comando
+para esto ya debemos tener una base de datos y haber configurado el archivo .env, aqui debemos ubicar el nombre de la base de datos y demas datos de coneccion para postgres.
+una vez establecidas los datos de coneccion a tu base de datos local ejecutamos el siguiente comando
    
     php artisan migrate
 

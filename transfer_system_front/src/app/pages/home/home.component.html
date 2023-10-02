@@ -1,63 +1,51 @@
 <!-- <app-sidebar></app-sidebar> -->
-<div class="container mt-5 w-50 bg-light">
-  <!-- <form> -->
-  <div class="form-group row">
-    <h3>
-      <small class="text-muted">BIENVENIDO</small>
-      {{name | uppercase}}
-    </h3>
-    <div class="col-sm-10">
-
+<div class="container mt-4">
+  <div class="row row-cols-2">
+    <div class="col-md-6 ">
+      <div class="card">
+        <div class="card-header">
+          <h2>Detalle de la cuenta</h2>
+        </div>
+        <div class="card-body">
+          <ul class="list-group">
+            <h4 class="card-title mb-2">Nombre</h4>
+            <li class="list-group-item mb-2">A disabled item</li>
+            <h4 class="card-title mb-2">Cédula</h4>
+            <li class="list-group-item mb-2">A second item</li>
+            <h4 class="card-title mb-2">Teléfono</h4>
+            <li class="list-group-item mb-2">A third item</li>
+            <h4 class="card-title mb-2">Dirección</h4>
+            <li class="list-group-item mb-2">A fourth item</li>
+          </ul>
+        </div>
+        <div class="card-footer text-muted">     
+        </div>
+      </div>     
     </div>
-  </div>
-
-  <div class="mt-5">
-
-
-    <div class="row mb-3">
-      <div *ngIf="tipo_usuario == 'owner'" class="col-md-1 text-start ">
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mimodal">Añadir nueva
-          empresa <i class="bi bi-building-add"></i> </button>
-
-        <!-- <app-registro-empresa class="modal fade" id="mimodal" tabindex="-1" aria-hidden="true"
-          aria-labelledby="modalTitle" (empresaGuardada)="actualizarEmpresas()"
-          [childMessage]="id"></app-registro-empresa> -->
+    <div class="col-md-6" style="align-items: center;">
+      <div class="d-grid gap-2">
+        <a href="#">
+          <button type="button" name="" id="" class="btn" style="background-color: #A8CBF3;">
+            <b>Historial de transferencias/ingresos </b> <i class="bi bi-clock-history"></i>
+          </button>
+        </a>
       </div>
-
+      <br>
+      <div class="d-grid gap-2">
+        <a href="#">
+          <button type="button" name="" id="" class="btn" style="background-color: #A8CBF3;">
+            <b>Ingreso de dinero </b> <i class="bi bi-cash-stack"></i>
+          </button>
+        </a>
+      </div>
+      <br>
+      <div class="d-grid gap-2">  
+        <a routerLink="transfer" (click)="navTransfer()">
+          <button type="button" name="" id="" class="btn" style="background-color: #A8CBF3;">
+          <b>Transferencia </b> <i class="bi bi-arrow-left-right"></i>
+          </button>
+        </a>
+      </div>
     </div>
-    <table class="table">
-      <thead>
-        <tr>
-          <th *ngIf="tipo_usuario == 'owner'">TUS EMPRESAS</th>
-          <th *ngIf="tipo_usuario == 'admin'">EMPRESAS REGISTRADAS</th>
-          <th></th>
-          <th></th>
-          <th></th>
-          <th></th>
-          <th></th>
-          
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let element of obj">
-          <td>{{ element.nombre_empresa |uppercase }}</td>
-          <td><button type="button" class="btn" (click)="OnCLickInfo(element.id)"><i class="bi bi-eye"></i></button>
-          </td>
-          <td><button type="button" class="btn" (click)="OnClickConf(element.id)"><i class="bi bi-gear"></i></button>
-          </td>
-          <td><button type="button" class="btn" (click)="OnClickRol(element.id)"><i
-                class="bi bi-clipboard-data"></i></button></td>
-          <td><button type="button" class="btn" (click)="OnClick(element.id, element.nombre_empresa, id)"><i
-                class="bi bi-person-lines-fill"></i></button></td>
-          <!-- <td><button type="button" class="btn btn-danger" (click)="OnClickDelete(element.id)"><i
-                class="bi bi-trash"></i></button></td> -->
-        </tr>
-      </tbody>
-    </table>
-    <div *ngIf="errorMessage" class="alert alert-warning d-flex align-items-center" role="alert">
-      <i class="bi bi-exclamation-circle me-2"></i>
-      {{ errorMessage }}
-    </div>
-
   </div>
 </div>

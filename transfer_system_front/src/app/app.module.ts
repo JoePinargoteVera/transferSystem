@@ -11,6 +11,7 @@ import { LoginComponent } from './pages/auth/login.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NabvarComponent } from './pages/navbar/nabvar.component';
 import { SingupComponent } from './pages/singup/singup.component';
+import { TransferComponent } from './pages/transfer/transfer.component';
 
 
 export function jwtOptionsFactory(cookieService: CookieService) {
@@ -26,7 +27,8 @@ export function jwtOptionsFactory(cookieService: CookieService) {
     LoginComponent,
     HomeComponent,
     NabvarComponent,
-    SingupComponent
+    SingupComponent,
+    TransferComponent
   ],
   imports: [
     BrowserModule,

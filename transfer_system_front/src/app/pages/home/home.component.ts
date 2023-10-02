@@ -71,7 +71,9 @@ export class HomeComponent implements OnInit {
         })
 
     }
-
+    navTransfer(){
+        this.router.navigate(['transfer'])
+    }
 
     OnClick(id_empresa: number, nombre: string, id_user: number) {
         this.router.navigate(['/employ'], { queryParams: { id: id_empresa, nombre_empresa: nombre, id_user } });

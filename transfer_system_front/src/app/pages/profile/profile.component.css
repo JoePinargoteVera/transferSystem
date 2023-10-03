@@ -1,0 +1,61 @@
+/* Estilos para el cuerpo */
+body {
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #0870e7;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Estilos para el contenedor del perfil */
+.profile-container {
+    max-width: 600px;
+    margin: 0px auto;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Estilos para la imagen de perfil */
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #131212;
+    margin: 0 auto 20px;
+    display: block;
+}
+
+/* Estilos para los títulos y párrafos */
+h1 {
+    text-align: center;
+    font-size: 28px;
+    color: #131313;
+    margin-bottom: 10px;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+    color: #161616;
+    margin-bottom: 10px;
+}
+
+/* Estilo para el enlace */
+a {
+    color: #0074D9;
+    text-decoration: none;
+}
+
+/* Estilo para el enlace cuando se coloca el cursor encima */
+a:hover {
+    text-decoration: underline;
+}
+

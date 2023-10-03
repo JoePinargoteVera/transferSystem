@@ -1,0 +1,64 @@
+body {
+    display: flex;
+    flex-direction: row-reverse; /* Invierte la dirección del flujo */
+    justify-content: flex-start; 
+    margin: 80;
+    padding: 80px;
+}
+
+.container {
+    background-color: #f4f4f4;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+    color: #333;
+}
+
+form {
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: #555;
+}
+
+input[type="number"],
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#mensaje-exito {
+    color: #009900;
+    font-weight: bold;
+    margin-top: 20px;
+    display: none;
+}
+
+.hidden {
+    display: none;
+}

@@ -11,6 +11,10 @@ import { LoginComponent } from './pages/auth/login.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NabvarComponent } from './pages/navbar/nabvar.component';
 import { SingupComponent } from './pages/singup/singup.component';
+import { HistorialTransferenciasComponent } from './pages/historial-transferencias/historial-transferencias.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { ConfiguracionComponent } from './pages/configuracion/configuracion.component';
+import { FormularioDeDepositoComponent } from './pages/formulario-de-deposito/formulario-de-deposito.component';
 
 
 export function jwtOptionsFactory(cookieService: CookieService) {
@@ -26,7 +30,11 @@ export function jwtOptionsFactory(cookieService: CookieService) {
     LoginComponent,
     HomeComponent,
     NabvarComponent,
-    SingupComponent
+    SingupComponent,
+    HistorialTransferenciasComponent,
+    ProfileComponent,
+    ConfiguracionComponent,
+    FormularioDeDepositoComponent
   ],
   imports: [
     BrowserModule,

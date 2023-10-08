@@ -38,6 +38,25 @@ export class NabvarComponent implements OnInit {
     
 
   }
+  navTransfer(){
+    this.router.navigate(['transferencia'])
+}
+
+  navHistory(){
+  this.router.navigate(['historial'])
+}
+
+  navIngreso(){
+  this.router.navigate(['ingreso'])
+}
+
+  navPerfil(){
+  this.router.navigate(['perfil'])
+}
+
+  navConfig(){
+  this.router.navigate(['configuracion'])
+}
 
   OnClick(email:string){
     this.router.navigate(['perfil'], { queryParams: {  email: email } });

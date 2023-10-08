@@ -1,51 +1,56 @@
 <!-- app.component.html -->
 
-<div class="container content-wrapper w-25 mt-5">
-  <div class="row justify-content-center mt-5">
-    <div class="col-md-6">
-      <div class="card">
-        <div class="card-header">
-          Iniciar sesión
-        </div>
-        <div class="card-body shadow">
-          <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
-            <div *ngIf="errorMessage" class="alert alert-danger d-flex align-items-center" role="alert">
-              <i class="bi bi-exclamation-triangle me-2"></i>
-              {{ errorMessage }}
-            </div>
-            <div class="form-group mt-3">
-              <div class="input-group">
-                <span class="input-group-text"><i class="bi bi-envelope-at"></i></span>
-                <input type="email" id="email" class="form-control" formControlName="email" placeholder="email" required
-                  [ngClass]="{ 'is-invalid': email?.invalid && (email?.dirty || email?.touched) }">
-                <div class="invalid-feedback" *ngIf="email?.invalid && (email?.dirty || email?.touched)">
-                  <div *ngIf="email?.errors?.['required']">Email es requerido.</div>
-                  <div *ngIf="email?.errors?.['email']">Email no válido.</div>
+<!-- Login -->
+<section class="vh-100 w-100" style="background-color: rgb(49, 45, 55)">
+  <div class="container py-8 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card shadow-2-strong mx-auto" style="border-radius: 1rem; width: 40%;">
+          <div class="card-body p-5 text-center">
+
+            <img src="../../../assets/tLogo.png" alt="Logo" class="img-fluid mb-5 w-25 h-25">
+            
+            <h3 class="mb-5">Inicio de sesión</h3>
+              <!-- Form -->
+              <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+                <div *ngIf="errorMessage" class="alert alert-danger d-flex align-items-center" role="alert">
+                  <i class="bi bi-exclamation-triangle me-2"></i>
+                  {{ errorMessage }}
                 </div>
-              </div>
-            </div>
-            <div class="form-group mt-4">
-              <div class="input-group">
-                <span class="input-group-text"><i class="bi bi-key"></i></span>
-                <input type="password" id="password" class="form-control" formControlName="password" placeholder="password" required
-                [ngClass]="{ 'is-invalid': password?.invalid && (password?.dirty || password?.touched) }">
-                <div class="invalid-feedback" *ngIf="password?.invalid && (password?.dirty || password?.touched)">
-                  <div *ngIf="password?.errors?.['required']">Password es requerido.</div>
-                  <div *ngIf="password?.errors?.['minlength']">Password debe tener al menos 6 caracteres.</div>
+                <div class="form-group mt-4">
+                  <!-- Input correo -->
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-envelope-at"></i></span>
+                    <input type="email" id="email" class="form-control" formControlName="email" placeholder="Correo electrónico" required
+                      [ngClass]="{ 'is-invalid': email?.invalid && (email?.dirty || email?.touched) }">
+                    <div class="invalid-feedback" *ngIf="email?.invalid && (email?.dirty || email?.touched)">
+                      <div *ngIf="email?.errors?.['required']">El correo electrónico es requerido.</div>
+                      <div *ngIf="email?.errors?.['email']">El correo electrónico no es válido.</div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-
-            <div class="form-group text-center mt-4">
-              <div class="col-sm-12 controls">
-                <button type="submit" [disabled]="loginForm.invalid" class="btn btn-primary">Ingresar</button>
-              </div>
-            </div>
-
-          </form>
-
+                <div class="form-group mt-4">
+                  <!-- Input contraseña -->
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-key"></i></span>
+                    <input type="password" id="password" class="form-control" formControlName="password" placeholder="Contraseña" required
+                    [ngClass]="{ 'is-invalid': password?.invalid && (password?.dirty || password?.touched) }">
+                    <div class="invalid-feedback" *ngIf="password?.invalid && (password?.dirty || password?.touched)">
+                      <div *ngIf="password?.errors?.['required']">La contraseña es requerida.</div>
+                      <div *ngIf="password?.errors?.['minlength']">La contraseña debe tener al menos 6 caracteres.</div>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="form-group text-center mt-4">
+                  <div class="col-sm-12 controls">
+                    <button type="submit" [disabled]="loginForm.invalid" class="btn text-white" style="background-color: rgb(117, 92, 153);">Ingresar</button>
+                  </div>
+                </div>
+              </form>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</section>

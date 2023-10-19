@@ -1,0 +1,59 @@
+/* Estilos para la tabla de historial de transacciones */
+
+body {
+    background-size: contain;
+    margin: 0;
+    padding: 10;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 10 0 10px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+    text-align: center;
+    color: #070707;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table th, .table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.table th {
+    background-color: #0870e7;
+    font-weight: bold;
+}
+
+/* Estilos para resaltar las filas de la tabla en hover */
+.table tbody tr:hover {
+    background-color: #688ffa;
+}
+
+/* Estilos para resaltar transferencias y depósitos */
+.table tbody tr.transferencia td:nth-child(2),
+.table tbody tr.deposito td:nth-child(2) {
+    font-weight: bold;
+    color: #161616;
+}
+
+/* Estilos para tipos de transacciones */
+.table tbody tr.transferencia {
+    background-color: #fff3e6;
+}
+
+.table tbody tr.deposito {
+    background-color: #e6f7ff;
+}

@@ -1,51 +1,23 @@
 <!-- <app-sidebar></app-sidebar> -->
-<div class="container mt-4">
-  <div class="row row-cols-2">
-    <div class="col-lg ">
-      <div class="card">
-        <div class="card-header">
-          <h2>Detalle de la cuenta</h2>
-        </div>
-        <div class="card-body">
-          <ul class="list-group">
-            <h4 class="card-title mb-2">Nombre</h4>
-            <li class="list-group-item mb-2"></li>
-            <h4 class="card-title mb-2">Cédula</h4>
-            <li class="list-group-item mb-2"></li>
-            <h4 class="card-title mb-2">Teléfono</h4>
-            <li class="list-group-item mb-2"></li>
-            <h4 class="card-title mb-2">Dirección</h4>
-            <li class="list-group-item mb-2"></li>
-          </ul>
-        </div>
-        <div class="card-footer text-muted">     
-        </div>
-      </div>     
+
+<div class="mx-auto mt-5" style=" width: 30%; height: 100%;">
+  <div class="card mx-auto">
+    <div class="card-header align-items-center">
+      <h2>Detalle de la cuenta</h2>
     </div>
-    <div class="col-sm text-center">
-      <div class="d-grid gap-2">
-        <a href="#">
-          <button type="button" name="" id="" class="btn btn-lg btn-block" style="background-color: #A8CBF3;">
-            <b>Historial de transferencias/ingresos </b> <i class="bi bi-clock-history"></i>
-          </button>
-        </a>
-      </div>
-      <br>
-      <div class="d-grid gap-2">
-        <a href="#">
-          <button type="button" name="" id="" class="btn btn-lg btn-block" style="background-color: #A8CBF3;">
-            <b>Ingreso de dinero </b> <i class="bi bi-cash-stack"></i>
-          </button>
-        </a>
-      </div>
-      <br>
-      <div class="d-grid gap-2">  
-        <a routerLink="transfer" (click)="navTransfer()">
-          <button type="button" name="" id="" class="btn btn-lg btn-block" style="background-color: #A8CBF3;">
-          <b>Transferencia </b> <i class="bi bi-arrow-left-right"></i>
-          </button>
-        </a>
-      </div>
+    <div class="card-body">
+      <ul class="list-group">
+        <h4 class="card-title mb-2">Nombre</h4>
+        <li class="list-group-item mb-2">{{name}}</li>
+        <h4 class="card-title mb-2">Cédula</h4>
+        <li class="list-group-item mb-2"></li>
+        <h4 class="card-title mb-2">Teléfono</h4>
+        <li class="list-group-item mb-2"></li>
+        <h4 class="card-title mb-2">Dirección</h4>
+        <li class="list-group-item mb-2"></li>
+      </ul>
+    </div>
+    <div class="card-footer text-muted">     
     </div>
   </div>
 </div>

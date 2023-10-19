@@ -1,0 +1,11 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+
+.sidebar.collapsed .nav-link .d-sm-inline {
+    display: none;
+}
+
+.sidebar {
+    transition: width 0.3s;
+}
